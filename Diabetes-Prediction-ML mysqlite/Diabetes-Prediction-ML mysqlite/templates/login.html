@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Diabetes Prediction</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Main HTML Style CSS-->
+  
+
+  <style>
+      body,h1 {font-family: "Raleway", Arial, sans-serif}
+      h1 {letter-spacing: 6px}
+    .w3-row-padding img {margin-bottom: 12px}
+    #header{
+  		     float:left;
+  			   margin-left:100px;
+		       }
+
+#wrapper
+{
+ margin:0 auto;
+ padding:0px;
+ text-align:center;
+ width:995px;
+}
+#wrapper h1
+{
+ margin-top:50px;
+ font-size:45px;
+ color:#424949;
+}
+#wrapper h1 p
+{
+font-size:18px;
+}
+.form_div
+{
+width:330px;
+margin-left:55px;
+margin-top: 50px;
+padding:10px;
+background-color:#424949;
+}
+.form_div1
+{
+width:330px;
+margin-left:555px;
+margin-top: -350px;
+padding:10px;
+background-color:#424949;
+}
+.form_div .form_label
+{
+margin:15px;
+margin-bottom:30px;
+font-size:25px;
+font-weight:bold;
+color:white;
+text-decoration:underline;
+}
+.form_div input[type="text"],input[type="password"]
+{
+width:230px;
+height:40px;
+border-radius:2px;
+font-size:17px;
+padding-left:5px;
+border:none;
+}
+.form_div input[type="submit"]
+{
+width:230px;
+height:40px;
+border:none;
+border-radius:2px;
+font-size:17px;
+background-color:#616A6B;
+border-bottom:3px solid #616A6B;
+color:white;
+font-weight:bold;
+}
+
+
+.form_div1 .form_label
+{
+margin:15px;
+margin-bottom:30px;
+font-size:25px;
+font-weight:bold;
+color:white;
+text-decoration:underline;
+}
+.form_div1 input[type="text"],input[type="password"]
+{
+width:230px;
+height:40px;
+border-radius:2px;
+font-size:17px;
+padding-left:5px;
+border:none;
+}
+.form_div1 input[type="submit"]
+{
+width:230px;
+height:40px;
+border:none;
+border-radius:2px;
+font-size:17px;
+background-color:#7F8C8D;
+border-bottom:3px solid #616A6B;
+color:white;
+font-weight:bold;
+}
+
+@media only screen and (min-width:700px) and (max-width:995px)
+{
+#wrapper
+{
+width:100%;
+}
+#wrapper h1
+{
+font-size:30px;
+}
+.form_div
+{
+width:50%;
+margin-left:25%;
+padding-left:0px;
+padding-right:0px;
+}
+.form_div input[type="text"],input[type="password"]
+{
+width:80%;
+}
+.form_div textarea
+{
+width:80%;
+}
+.form_div input[type="submit"]
+{
+width:80%;
+}
+
+
+
+.form_div1
+{
+width:50%;
+margin-left:25%;
+padding-left:0px;
+padding-right:0px;
+}
+.form_div1 input[type="text"],input[type="password"]
+{
+width:80%;
+}
+.form_div1 textarea
+{
+width:80%;
+}
+.form_div1 input[type="submit"]
+{
+width:80%;
+}
+}
+@media only screen and (min-width:400px) and (max-width:699px)
+{
+#wrapper
+{
+width:100%;
+}
+#wrapper h1
+{
+font-size:30px;
+}
+.form_div
+{
+width:60%;
+margin-left:20%;
+}
+.form_div input[type="text"],input[type="password"]
+{
+width:80%;
+}
+.form_div input[type="submit"]
+{
+width:80%;
+}
+
+.form_div1
+{
+width:60%;
+margin-left:20%;
+}
+.form_div1 input[type="text"],input[type="password"]
+{
+width:80%;
+}
+.form_div1 input[type="submit"]
+{
+width:80%;
+}
+}
+@media only screen and (min-width:100px) and (max-width:399px)
+{
+#wrapper
+{
+width:100%;
+}
+#wrapper h1
+{
+font-size:25px;
+}
+.form_div
+{
+width:90%;
+margin-left:-5%;
+padding-left:0px;
+padding-right:0px;
+}
+.form_div input[type="text"],input[type="password"]
+{
+width:80%;
+}
+.form_div input[type="submit"]
+{
+width:80%;
+}
+
+
+.form_div1
+{
+width:90%;
+margin-left:-5%;
+padding-left:0px;
+padding-right:0px;
+}
+.form_div1 input[type="text"],input[type="password"]
+{
+width:80%;
+}
+.form_div1 input[type="submit"]
+{
+width:80%;
+}
+}
+  </style>
+</head>
+
+<body class="w3-content" align="center" style="background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fmedium.com%2Fdev-genius%2Fearly-stage-diabetes-risk-prediction-bd42f113a20b&psig=AOvVaw33Ex6W3aIu-YSLmQe-tkCs&ust=1610563391566000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPja4KmGl-4CFQAAAAAdAAAAABAf);">
+    <!-- navbar -->
+    <!-- Header -->
+  <header class="w3-panel w3-center w3-opacity" style="padding:32px 16px">
+    <h1 class="w3-xlarge">Diabetes Prediction Using ML</h1>
+    
+    <div class="w3-padding-32">
+      <div class="w3-bar w3-border">
+        <a href="/" class="w3-bar-item w3-button">Signup/Signin</a>
+              
+      </div>
+    </div>
+
+  </header>
+    
+      <div>
+        
+        <p class="w3-content" align="center" style="font-size: x-large;" ><strong>Account Credentials</strong> </p>
+        </div>
+
+      <section id="services">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+    
+            <div class="col-lg-12 text-left">
+      
+                <div id="wrapper">
+
+                    <div class="form_div">
+                    <p class="form_label">LOGIN FORM</p>
+                    <form method="GET" action="/signin">
+                    <p><input type="text" name="username" placeholder="Enter Email"></p>
+                    <p><input type="password" name="password" placeholder="**********"></p>
+                    <p><input type="submit" value="LOGIN"></p>
+                    </form>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="form_div1">
+                    <p class="form_label">SIGNUP FORM</p>
+                    <form method="GET" action="/signup">
+                    <p><input type="text" name="username1" placeholder="Enter Name"></p>
+                    <p><input type="text" name="mail1" placeholder="Enter Email"></p>
+                    <p><input type="password" name="password1" placeholder="**********"></p>
+                    <p><input type="submit" value="SIGNUP"></p>
+                    </form>
+                    </div>
+          
+            
+           
+         </div>
+         </div>
+         </div>
+         </div>
+         </section>
+
+         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/3.0.3/dc.min.js"></script>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

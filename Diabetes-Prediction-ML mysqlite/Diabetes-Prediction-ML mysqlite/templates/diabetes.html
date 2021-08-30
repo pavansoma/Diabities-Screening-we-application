@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Diabetes Prediction</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #d3c8e2;
+    overflow: hidden;
+    font-family: 'Francois One', sans-serif;
+}
+.box{
+    background-color:#430b5a63;
+    color: white;
+    padding: 30px;
+    margin-left: -45%;
+    margin-top: 3%;
+
+}
+.button{
+    border: none;
+    outline: none;
+    padding: 10px 40px;
+    color: white;
+    background: #2b0448;
+}
+
+@media only screen and (max-width: 430px) {
+    .img {
+      visibility: hidden;
+    }
+    .header-text{
+        text-align: center;
+    }
+  }
+    </style>
+</head>
+<body>
+  <header class="navbar navbar-expand-sm navbar-dark bg-dark flex-column flex-md-row bd-navbar">
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item">
+        <a class="nav-link active" href="/diabetes">Diabetic Prediction</a>
+      </li><br>
+      <li class="nav-item">
+        <a style="color: rgb(59, 221, 37);"  class="nav-link active" href="/signin">Signout</a>
+      </li>
+    </ul>
+    
+  </div>
+</header>
+  <div class="row justify-content-center">
+    <!--<div class="col-sm-12 col-lg-5">
+      <h4 class="text-white mt-2 header-text"><u>Diabetes Prediction</u></h4>-->
+  <form action='/predict' method="POST" class="box">
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="fname">Pregnancies</label>
+          <input type="number" class="form-control" name="Pregnancies" aria-describedby="Pregnancies" placeholder="No of pregnancies">
+          <small id="Pregnancies" class="form-text text-white">If male enter zero</small>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="fname">Glucose</label>
+          <input type="number" step="0.01" class="form-control" name="Glucose" aria-describedby="Glucose" placeholder="Blood Sugar Level">
+          <small class="form-text text-white">Provide value in mg/dL</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="fname">Blood Pressure</label>
+          <input type="number" step="0.01" class="form-control" name="Bp" aria-describedby="Blood Pressure" placeholder="Blood Pressure Level">
+          <small class="form-text text-white">Provide value in mm/Hg</small>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="fname">Skin Thickness</label>
+          <input type="number" step="0.01" class="form-control" name="SkinThickness" aria-describedby="Skin Thickness" placeholder="Skin Thickness Value">
+          <small class="form-text text-white">Determined by collagen content</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="fname">Insulin</label>
+          <input type="number" step="0.01"class="form-control" name="Insulin" aria-describedby="Insulin" placeholder="Insulin Value">
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="fname">BMI</label>
+          <input type="number" step="0.01" class="form-control" name="BMI" aria-describedby="BMI" placeholder="BMI Value">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="fname">Diabetes Pedigree Function</label>
+          <input type="number" class="form-control" step="0.01" name="DiabetesPedigreeFunction" aria-describedby="DiabetesPedigreeFunction" placeholder="Function Value">
+          <small id="Pregnancies" class="form-text text-white">Diabetes history in genetic relationship of those relatives to the patient.</small>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="fname">Age</label>
+          <input type="number" class="form-control" name="Age" aria-describedby="Age" placeholder="Enter Age">
+        </div>
+      </div>
+    </div>
+    <button class="button" type="submit">Check</button>
+  </form>
+    </div>
+    <div class="col-sm-12 col-lg-5 d-flex flex-column align-items-center justify-content-center">
+      <img style="margin-top: -100%; width: 110%; margin-left: 275%;" src="static/images/bgbg.jpg" >
+      <h4 style="margin-top: 12%; width: 110%; margin-left: 325%; font-style: italic; font-size: xx-large;">{{pred}}</h4>
+    </div>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
